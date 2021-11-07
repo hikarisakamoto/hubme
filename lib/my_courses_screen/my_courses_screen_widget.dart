@@ -28,7 +28,7 @@ class _MyCoursesScreenWidgetState extends State<MyCoursesScreenWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       key: scaffoldKey,
-      backgroundColor: Color(0xFFF1F5F8),
+      backgroundColor: FlutterFlowTheme.tertiaryColor,
       body: SafeArea(
         child: Padding(
           padding: EdgeInsetsDirectional.fromSTEB(8, 0, 8, 0),

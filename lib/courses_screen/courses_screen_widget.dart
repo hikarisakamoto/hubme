@@ -29,7 +29,7 @@ class _CoursesScreenWidgetState extends State<CoursesScreenWidget> {
     return Scaffold(
       key: scaffoldKey,
       appBar: AppBar(
-        backgroundColor: Color(0xFF090F13),
+        backgroundColor: FlutterFlowTheme.tertiaryColor,
         automaticallyImplyLeading: false,
         title: Padding(
           padding: EdgeInsetsDirectional.fromSTEB(8, 0, 0, 0),
@@ -37,7 +37,7 @@ class _CoursesScreenWidgetState extends State<CoursesScreenWidget> {
             'Cursos',
             style: FlutterFlowTheme.title1.override(
               fontFamily: 'Lexend Deca',
-              color: Colors.white,
+              color: FlutterFlowTheme.primaryColor,
               fontSize: 32,
               fontWeight: FontWeight.bold,
             ),
@@ -47,7 +47,7 @@ class _CoursesScreenWidgetState extends State<CoursesScreenWidget> {
         centerTitle: false,
         elevation: 2,
       ),
-      backgroundColor: Color(0xFF262D34),
+      backgroundColor: FlutterFlowTheme.tertiaryColor,
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
@@ -63,7 +63,10 @@ class _CoursesScreenWidgetState extends State<CoursesScreenWidget> {
                       width: MediaQuery.of(context).size.width,
                       height: 60,
                       decoration: BoxDecoration(
-                        color: Color(0xFF090F13),
+                        color: FlutterFlowTheme.tertiaryColor,
+                        border: Border.all(
+                          color: FlutterFlowTheme.tertiaryColor,
+                        ),
                       ),
                       child: Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(20, 4, 20, 0),
@@ -507,7 +510,7 @@ class _CoursesScreenWidgetState extends State<CoursesScreenWidget> {
                                             options: FFButtonOptions(
                                               width: 120,
                                               height: 40,
-                                              color: Color(0xFF39D2C0),
+                                              color: Color(0xFFEE8B60),
                                               textStyle: GoogleFonts.getFont(
                                                 'Lexend Deca',
                                                 color: Colors.white,
@@ -625,7 +628,7 @@ class _CoursesScreenWidgetState extends State<CoursesScreenWidget> {
                                             options: FFButtonOptions(
                                               width: 120,
                                               height: 40,
-                                              color: Color(0xFF39D2C0),
+                                              color: Color(0xFFEE8B60),
                                               textStyle: GoogleFonts.getFont(
                                                 'Lexend Deca',
                                                 color: Colors.white,
@@ -743,7 +746,7 @@ class _CoursesScreenWidgetState extends State<CoursesScreenWidget> {
                                             options: FFButtonOptions(
                                               width: 120,
                                               height: 40,
-                                              color: Color(0xFF39D2C0),
+                                              color: Color(0xFFEE8B60),
                                               textStyle: GoogleFonts.getFont(
                                                 'Lexend Deca',
                                                 color: Colors.white,

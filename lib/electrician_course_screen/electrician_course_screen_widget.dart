@@ -115,7 +115,7 @@ class _ElectricianCourseScreenWidgetState
                       Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(0, 4, 0, 0),
                         child: Text(
-                          'Aula 2',
+                          'Aula 1',
                           textAlign: TextAlign.start,
                           style: FlutterFlowTheme.title2.override(
                             fontFamily: 'Lexend Deca',
