@@ -507,11 +507,12 @@ class _JobsFeedScreenWidgetState extends State<JobsFeedScreenWidget> {
                           width: 250,
                           height: 170,
                           decoration: BoxDecoration(
+                            color: FlutterFlowTheme.tertiaryColor,
                             image: DecorationImage(
-                              fit: BoxFit.fitWidth,
-                              image: Image.asset(
-                                'assets/images/austin-neill-hgO1wFPXl3I-unsplash.jpg',
-                              ).image,
+                              fit: BoxFit.contain,
+                              image: CachedNetworkImageProvider(
+                                'https://static-images.ifood.com.br/image/upload/t_high/logosgde/c9fb1806-3388-4e91-a2a6-749cfe317f29/202105251130_ZUnu_i.png',
+                              ),
                             ),
                             boxShadow: [
                               BoxShadow(
@@ -531,31 +532,8 @@ class _JobsFeedScreenWidgetState extends State<JobsFeedScreenWidget> {
                                     EdgeInsetsDirectional.fromSTEB(8, 4, 8, 0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
+                                  mainAxisAlignment: MainAxisAlignment.end,
                                   children: [
-                                    Card(
-                                      clipBehavior: Clip.antiAliasWithSaveLayer,
-                                      color: Color(0x9839D2C0),
-                                      elevation: 0,
-                                      shape: RoundedRectangleBorder(
-                                        borderRadius: BorderRadius.circular(8),
-                                      ),
-                                      child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            6, 2, 6, 2),
-                                        child: Text(
-                                          '1,365 ATTENDING',
-                                          style: FlutterFlowTheme.bodyText2
-                                              .override(
-                                            fontFamily: 'Lexend Deca',
-                                            color: Colors.white,
-                                            fontSize: 14,
-                                            fontWeight: FontWeight.normal,
-                                          ),
-                                        ),
-                                      ),
-                                    ),
                                     Card(
                                       clipBehavior: Clip.antiAliasWithSaveLayer,
                                       color: Color(0xFF1E2429),
@@ -613,7 +591,7 @@ class _JobsFeedScreenWidgetState extends State<JobsFeedScreenWidget> {
                                                 EdgeInsetsDirectional.fromSTEB(
                                                     4, 4, 4, 4),
                                             child: Text(
-                                              '14',
+                                              '2',
                                               textAlign: TextAlign.center,
                                               style: FlutterFlowTheme.title3
                                                   .override(
@@ -638,22 +616,12 @@ class _JobsFeedScreenWidgetState extends State<JobsFeedScreenWidget> {
                                             CrossAxisAlignment.start,
                                         children: [
                                           Text(
-                                            'San Antonio Music Festi…',
+                                            'Domino\'s Pizza',
                                             style: FlutterFlowTheme.bodyText1
                                                 .override(
                                               fontFamily: 'Lexend Deca',
                                               color: Colors.white,
                                               fontSize: 14,
-                                              fontWeight: FontWeight.normal,
-                                            ),
-                                          ),
-                                          Text(
-                                            'Gerdau',
-                                            style: FlutterFlowTheme.bodyText1
-                                                .override(
-                                              fontFamily: 'Lexend Deca',
-                                              color: Colors.white,
-                                              fontSize: 12,
                                               fontWeight: FontWeight.normal,
                                             ),
                                           )
