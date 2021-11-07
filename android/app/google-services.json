@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "805246232494",
+    "project_id": "hubme-hackaton",
+    "storage_bucket": "hubme-hackaton.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:805246232494:android:99f0d889359d773a06ca3f",
+        "android_client_info": {
+          "package_name": "com.inspiration5.hubme"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "805246232494-dhsmmo9j7eomfn3uvt5mil4emn2mp106.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.inspiration5.hubme",
+            "certificate_hash": "9bbb3186b2189ef16d8f272bdab59362c395cbb4"
+          }
+        },
+        {
+          "client_id": "805246232494-s47371h1psfplvr7gedos4bj3r5k160r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCliLkjptwo2T46R7YpfTS4qxpVY44AqO0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "805246232494-s47371h1psfplvr7gedos4bj3r5k160r.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "805246232494-tsdtfocvpedqd3hil7kb00iomdre78ci.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.inspiration5.hubme"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
