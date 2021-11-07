@@ -20,114 +20,91 @@ class _JobInterviewCourseScreenWidgetState
   Widget build(BuildContext context) {
     return Scaffold(
       key: scaffoldKey,
-      body: Column(
-        mainAxisSize: MainAxisSize.max,
-        children: [
-          Row(
-            mainAxisSize: MainAxisSize.min,
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Expanded(
-                child: Container(
-                  height: 240,
-                  child: Stack(
-                    alignment: AlignmentDirectional(-0.95, -0.7),
-                    children: [
-                      Align(
-                        alignment: AlignmentDirectional(-0.95, -0.55),
-                        child: InkWell(
-                          onTap: () async {
-                            Navigator.pop(context);
-                          },
-                          child: Card(
-                            clipBehavior: Clip.antiAliasWithSaveLayer,
-                            color: Color(0xFFF5F5F5),
-                            elevation: 3,
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(100),
-                            ),
-                            child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
-                                  10, 10, 10, 10),
-                              child: Icon(
-                                Icons.arrow_back_rounded,
-                                color: Color(0xFF4B39EF),
-                                size: 24,
-                              ),
-                            ),
-                          ),
-                        ),
-                      ),
-                      Align(
-                        alignment: AlignmentDirectional(0, 0),
-                        child: FlutterFlowYoutubePlayer(
-                          url: 'https://youtu.be/2MtKSIwqVLA',
-                          autoPlay: false,
-                          looping: true,
-                          mute: false,
-                          showControls: true,
-                          showFullScreen: true,
-                        ),
-                      )
-                    ],
-                  ),
-                ),
-              )
-            ],
+      appBar: AppBar(
+        backgroundColor: FlutterFlowTheme.primaryColor,
+        automaticallyImplyLeading: true,
+        title: Text(
+          'Aula 3',
+          style: FlutterFlowTheme.bodyText1.override(
+            fontFamily: 'Poppins',
+            color: FlutterFlowTheme.tertiaryColor,
+            fontSize: 25,
           ),
-          Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(20, 16, 20, 0),
-            child: Row(
-              mainAxisSize: MainAxisSize.max,
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Column(
-                  mainAxisSize: MainAxisSize.max,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      'Curso de EntrevisEntrevistas para Emprego',
-                      style: FlutterFlowTheme.bodyText2.override(
-                        fontFamily: 'Lexend Deca',
-                        color: Color(0xFF8B97A2),
-                        fontSize: 14,
-                        fontWeight: FontWeight.normal,
-                      ),
-                    ),
-                    Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(0, 4, 0, 0),
-                      child: Text(
-                        'Aula 3',
-                        textAlign: TextAlign.start,
-                        style: FlutterFlowTheme.title2.override(
-                          fontFamily: 'Lexend Deca',
-                          color: Color(0xFF090F13),
-                          fontSize: 22,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    )
-                  ],
-                )
-              ],
-            ),
-          ),
-          Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(20, 16, 20, 0),
-            child: Row(
-              mainAxisSize: MainAxisSize.max,
+        ),
+        actions: [],
+        centerTitle: true,
+        elevation: 4,
+      ),
+      body: SafeArea(
+        child: Column(
+          mainAxisSize: MainAxisSize.max,
+          children: [
+            Row(
+              mainAxisSize: MainAxisSize.min,
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Expanded(
-                  child: Column(
+                  child: Container(
+                    height: 240,
+                    child: Stack(
+                      alignment: AlignmentDirectional(-0.95, -0.7),
+                      children: [
+                        Align(
+                          alignment: AlignmentDirectional(-0.95, -0.55),
+                          child: InkWell(
+                            onTap: () async {
+                              Navigator.pop(context);
+                            },
+                            child: Card(
+                              clipBehavior: Clip.antiAliasWithSaveLayer,
+                              color: Color(0xFFF5F5F5),
+                              elevation: 3,
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(100),
+                              ),
+                              child: Padding(
+                                padding: EdgeInsetsDirectional.fromSTEB(
+                                    10, 10, 10, 10),
+                                child: Icon(
+                                  Icons.arrow_back_rounded,
+                                  color: Color(0xFF4B39EF),
+                                  size: 24,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                        Align(
+                          alignment: AlignmentDirectional(0, 0),
+                          child: FlutterFlowYoutubePlayer(
+                            url: 'https://youtu.be/2MtKSIwqVLA',
+                            autoPlay: false,
+                            looping: true,
+                            mute: false,
+                            showControls: true,
+                            showFullScreen: true,
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                )
+              ],
+            ),
+            Padding(
+              padding: EdgeInsetsDirectional.fromSTEB(20, 16, 20, 0),
+              child: Row(
+                mainAxisSize: MainAxisSize.max,
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Column(
                     mainAxisSize: MainAxisSize.max,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        'Dicas para sua entrevista',
+                        'Curso de EntrevisEntrevistas para Emprego',
                         style: FlutterFlowTheme.bodyText2.override(
                           fontFamily: 'Lexend Deca',
                           color: Color(0xFF8B97A2),
@@ -138,23 +115,63 @@ class _JobInterviewCourseScreenWidgetState
                       Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(0, 4, 0, 0),
                         child: Text(
-                          'Nossa colega vai passar algumas dicas importantes para você ',
+                          'Aula 3',
                           textAlign: TextAlign.start,
-                          style: FlutterFlowTheme.subtitle2.override(
+                          style: FlutterFlowTheme.title2.override(
                             fontFamily: 'Lexend Deca',
-                            color: Color(0xFF151B1E),
-                            fontSize: 16,
-                            fontWeight: FontWeight.w500,
+                            color: Color(0xFF090F13),
+                            fontSize: 22,
+                            fontWeight: FontWeight.bold,
                           ),
                         ),
                       )
                     ],
-                  ),
-                )
-              ],
+                  )
+                ],
+              ),
             ),
-          )
-        ],
+            Padding(
+              padding: EdgeInsetsDirectional.fromSTEB(20, 16, 20, 0),
+              child: Row(
+                mainAxisSize: MainAxisSize.max,
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Expanded(
+                    child: Column(
+                      mainAxisSize: MainAxisSize.max,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Dicas para sua entrevista',
+                          style: FlutterFlowTheme.bodyText2.override(
+                            fontFamily: 'Lexend Deca',
+                            color: Color(0xFF8B97A2),
+                            fontSize: 14,
+                            fontWeight: FontWeight.normal,
+                          ),
+                        ),
+                        Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(0, 4, 0, 0),
+                          child: Text(
+                            'Nossa colega vai passar algumas dicas importantes para você ',
+                            textAlign: TextAlign.start,
+                            style: FlutterFlowTheme.subtitle2.override(
+                              fontFamily: 'Lexend Deca',
+                              color: Color(0xFF151B1E),
+                              fontSize: 16,
+                              fontWeight: FontWeight.w500,
+                            ),
+                          ),
+                        )
+                      ],
+                    ),
+                  )
+                ],
+              ),
+            )
+          ],
+        ),
       ),
     );
   }

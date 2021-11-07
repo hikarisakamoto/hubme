@@ -26,7 +26,7 @@ class _UserSettingsScreenWidgetState extends State<UserSettingsScreenWidget> {
       body: SafeArea(
         child: Container(
           width: MediaQuery.of(context).size.width,
-          height: 600,
+          height: MediaQuery.of(context).size.height * 1,
           decoration: BoxDecoration(
             color: Colors.white,
             shape: BoxShape.rectangle,
@@ -35,217 +35,180 @@ class _UserSettingsScreenWidgetState extends State<UserSettingsScreenWidget> {
             padding: EdgeInsetsDirectional.fromSTEB(24, 0, 24, 0),
             child: Column(
               mainAxisSize: MainAxisSize.max,
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Row(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    Align(
-                      alignment: AlignmentDirectional(0.05, 0),
-                      child: Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(0, 60, 0, 0),
-                        child: Container(
-                          width: 1,
-                          height: 1,
-                          clipBehavior: Clip.antiAlias,
-                          decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                          ),
-                          child: Image.asset(
-                            'assets/images/UI_avatar@2x.png',
+                    Column(
+                      mainAxisSize: MainAxisSize.max,
+                      children: [
+                        Align(
+                          alignment: AlignmentDirectional(0, 0),
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(75),
+                            child: Image.network(
+                              'https://www.geledes.org.br/wp-content/uploads/2018/01/pessoa-negra-escritorio.jpeg',
+                              width: 100,
+                              height: 100,
+                              fit: BoxFit.cover,
+                            ),
                           ),
                         ),
-                      ),
-                    ),
-                    Align(
-                      alignment: AlignmentDirectional(0, 0),
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(75),
-                        child: Image.network(
-                          'https://www.geledes.org.br/wp-content/uploads/2018/01/pessoa-negra-escritorio.jpeg',
-                          width: 100,
-                          height: 100,
-                          fit: BoxFit.cover,
-                        ),
-                      ),
+                        Text(
+                          'Gerenciar Foto',
+                          style: FlutterFlowTheme.bodyText1.override(
+                            fontFamily: 'Poppins',
+                            color: Color(0xFF3C3BAF),
+                          ),
+                        )
+                      ],
                     )
                   ],
-                ),
-                Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0, 8, 0, 0),
-                  child: Row(
-                    mainAxisSize: MainAxisSize.max,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        'Gerenciar Foto',
-                        style: FlutterFlowTheme.bodyText1.override(
-                          fontFamily: 'Poppins',
-                          color: Color(0xFF3C3BAF),
-                        ),
-                      )
-                    ],
-                  ),
                 ),
                 Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(0, 16, 0, 0),
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Column(
+                        mainAxisSize: MainAxisSize.max,
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Padding(
+                            padding: EdgeInsetsDirectional.fromSTEB(0, 8, 0, 0),
+                            child: Text(
+                              'Lucas de Assis',
+                              style: FlutterFlowTheme.title1.override(
+                                fontFamily: 'Lexend Deca',
+                                color: Color(0xFF090F13),
+                                fontSize: 24,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ),
+                          Text(
+                            'Desenvolvedor Mobile',
+                            style: FlutterFlowTheme.bodyText1,
+                          ),
+                          Text(
+                            'Status do Perfil',
+                            style: FlutterFlowTheme.bodyText1,
+                          ),
+                          Row(
+                            mainAxisSize: MainAxisSize.max,
+                            children: [
+                              Text(
+                                'Vísível para as empresas',
+                                style: FlutterFlowTheme.bodyText2.override(
+                                  fontFamily: 'Poppins',
+                                  fontSize: 12,
+                                ),
+                              ),
+                              Icon(
+                                Icons.check_circle_outlined,
+                                color: Colors.black,
+                                size: 12,
+                              )
+                            ],
+                          )
+                        ],
+                      )
+                    ],
+                  ),
+                ),
+                Padding(
+                  padding: EdgeInsetsDirectional.fromSTEB(8, 8, 8, 8),
+                  child: Column(
+                    mainAxisSize: MainAxisSize.max,
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(0, 8, 0, 0),
-                        child: Text(
-                          'Lucas de Assis',
-                          style: FlutterFlowTheme.title1.override(
-                            fontFamily: 'Lexend Deca',
-                            color: Color(0xFF090F13),
-                            fontSize: 24,
-                            fontWeight: FontWeight.bold,
+                        padding: EdgeInsetsDirectional.fromSTEB(8, 8, 8, 8),
+                        child: FFButtonWidget(
+                          onPressed: () {
+                            print('Button pressed ...');
+                          },
+                          text: 'Gerências Competências',
+                          options: FFButtonOptions(
+                            width: 300,
+                            height: 40,
+                            color: Colors.white,
+                            textStyle: FlutterFlowTheme.bodyText2.override(
+                              fontFamily: 'Lexend Deca',
+                              color: FlutterFlowTheme.primaryColor,
+                              fontSize: 14,
+                              fontWeight: FontWeight.normal,
+                            ),
+                            elevation: 3,
+                            borderSide: BorderSide(
+                              color: Colors.transparent,
+                              width: 1,
+                            ),
+                            borderRadius: 8,
                           ),
+                          loading: _loadingButton1,
                         ),
-                      )
-                    ],
-                  ),
-                ),
-                Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0, 4, 0, 0),
-                  child: Row(
-                    mainAxisSize: MainAxisSize.max,
-                    children: [
-                      Text(
-                        'Desenvolvedor Mobile',
-                        style: FlutterFlowTheme.bodyText1,
-                      )
-                    ],
-                  ),
-                ),
-                Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0, 8, 0, 0),
-                  child: Row(
-                    mainAxisSize: MainAxisSize.max,
-                    children: [
-                      Text(
-                        'Status do Perfil',
-                        style: FlutterFlowTheme.bodyText1,
-                      )
-                    ],
-                  ),
-                ),
-                Row(
-                  mainAxisSize: MainAxisSize.max,
-                  children: [
-                    Text(
-                      'Vísível para as empresas',
-                      style: FlutterFlowTheme.bodyText2.override(
-                        fontFamily: 'Poppins',
-                        fontSize: 12,
                       ),
-                    ),
-                    Icon(
-                      Icons.check_circle_outlined,
-                      color: Colors.black,
-                      size: 12,
-                    )
-                  ],
-                ),
-                Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0, 250, 0, 0),
-                  child: Row(
-                    mainAxisSize: MainAxisSize.max,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      FFButtonWidget(
-                        onPressed: () {
-                          print('Button pressed ...');
-                        },
-                        text: 'Gerências Competências',
-                        options: FFButtonOptions(
-                          width: 300,
-                          height: 40,
-                          color: Colors.white,
-                          textStyle: FlutterFlowTheme.bodyText2.override(
-                            fontFamily: 'Lexend Deca',
-                            color: FlutterFlowTheme.primaryColor,
-                            fontSize: 14,
-                            fontWeight: FontWeight.normal,
+                      Padding(
+                        padding: EdgeInsetsDirectional.fromSTEB(8, 8, 8, 8),
+                        child: FFButtonWidget(
+                          onPressed: () {
+                            print('Button pressed ...');
+                          },
+                          text: 'Editar Perfil',
+                          options: FFButtonOptions(
+                            width: 300,
+                            height: 40,
+                            color: Colors.white,
+                            textStyle: FlutterFlowTheme.bodyText2.override(
+                              fontFamily: 'Lexend Deca',
+                              color: FlutterFlowTheme.primaryColor,
+                              fontSize: 14,
+                              fontWeight: FontWeight.normal,
+                            ),
+                            elevation: 3,
+                            borderSide: BorderSide(
+                              color: Colors.transparent,
+                              width: 1,
+                            ),
+                            borderRadius: 8,
                           ),
-                          elevation: 3,
-                          borderSide: BorderSide(
-                            color: Colors.transparent,
-                            width: 1,
-                          ),
-                          borderRadius: 8,
+                          loading: _loadingButton2,
                         ),
-                        loading: _loadingButton1,
-                      )
-                    ],
-                  ),
-                ),
-                Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0, 16, 0, 0),
-                  child: Row(
-                    mainAxisSize: MainAxisSize.max,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      FFButtonWidget(
-                        onPressed: () {
-                          print('Button pressed ...');
-                        },
-                        text: 'Editar Perfil',
-                        options: FFButtonOptions(
-                          width: 300,
-                          height: 40,
-                          color: Colors.white,
-                          textStyle: FlutterFlowTheme.bodyText2.override(
-                            fontFamily: 'Lexend Deca',
-                            color: FlutterFlowTheme.primaryColor,
-                            fontSize: 14,
-                            fontWeight: FontWeight.normal,
+                      ),
+                      Padding(
+                        padding: EdgeInsetsDirectional.fromSTEB(8, 8, 8, 8),
+                        child: FFButtonWidget(
+                          onPressed: () {
+                            print('Button pressed ...');
+                          },
+                          text: 'Sair',
+                          options: FFButtonOptions(
+                            width: 300,
+                            height: 40,
+                            color: Colors.white,
+                            textStyle: FlutterFlowTheme.bodyText2.override(
+                              fontFamily: 'Lexend Deca',
+                              color: FlutterFlowTheme.primaryColor,
+                              fontSize: 14,
+                              fontWeight: FontWeight.normal,
+                            ),
+                            elevation: 3,
+                            borderSide: BorderSide(
+                              color: Colors.transparent,
+                              width: 1,
+                            ),
+                            borderRadius: 8,
                           ),
-                          elevation: 3,
-                          borderSide: BorderSide(
-                            color: Colors.transparent,
-                            width: 1,
-                          ),
-                          borderRadius: 8,
+                          loading: _loadingButton3,
                         ),
-                        loading: _loadingButton2,
-                      )
-                    ],
-                  ),
-                ),
-                Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0, 16, 0, 0),
-                  child: Row(
-                    mainAxisSize: MainAxisSize.max,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      FFButtonWidget(
-                        onPressed: () {
-                          print('Button pressed ...');
-                        },
-                        text: 'Sair',
-                        options: FFButtonOptions(
-                          width: 300,
-                          height: 40,
-                          color: Colors.white,
-                          textStyle: FlutterFlowTheme.bodyText2.override(
-                            fontFamily: 'Lexend Deca',
-                            color: FlutterFlowTheme.primaryColor,
-                            fontSize: 14,
-                            fontWeight: FontWeight.normal,
-                          ),
-                          elevation: 3,
-                          borderSide: BorderSide(
-                            color: Colors.transparent,
-                            width: 1,
-                          ),
-                          borderRadius: 8,
-                        ),
-                        loading: _loadingButton3,
                       )
                     ],
                   ),
