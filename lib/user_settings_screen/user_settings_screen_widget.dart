@@ -1,6 +1,7 @@
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
+import '../user_compentence_screen/user_compentence_screen_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -132,8 +133,19 @@ class _UserSettingsScreenWidgetState extends State<UserSettingsScreenWidget> {
                       Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(8, 8, 8, 8),
                         child: FFButtonWidget(
-                          onPressed: () {
-                            print('Button pressed ...');
+                          onPressed: () async {
+                            setState(() => _loadingButton1 = true);
+                            try {
+                              await Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) =>
+                                      UserCompentenceScreenWidget(),
+                                ),
+                              );
+                            } finally {
+                              setState(() => _loadingButton1 = false);
+                            }
                           },
                           text: 'Gerências Competências',
                           options: FFButtonOptions(
