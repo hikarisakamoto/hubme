@@ -60,8 +60,8 @@ class _LoginScreenWidgetState extends State<LoginScreenWidget> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        Image.asset(
-                          'assets/images/full_logo.png',
+                        SvgPicture.asset(
+                          'assets/images/Logo_2.svg',
                           width: 300,
                           height: 137,
                           fit: BoxFit.contain,

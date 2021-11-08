@@ -96,7 +96,7 @@ class _NavBarPageState extends State<NavBarPage> {
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(
-              Icons.play_circle_fill,
+              Icons.play_arrow_outlined,
               size: 24,
             ),
             activeIcon: Icon(
