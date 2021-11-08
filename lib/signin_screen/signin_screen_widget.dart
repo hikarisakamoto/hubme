@@ -62,11 +62,11 @@ class _SigninScreenWidgetState extends State<SigninScreenWidget> {
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Image.asset(
-                          'assets/images/full_logo.png',
+                        SvgPicture.asset(
+                          'assets/images/Logo_2.svg',
                           width: 300,
                           height: 137,
-                          fit: BoxFit.cover,
+                          fit: BoxFit.contain,
                         )
                       ],
                     ),
