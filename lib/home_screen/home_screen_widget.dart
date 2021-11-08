@@ -6,6 +6,7 @@ import '../login_screen/login_screen_widget.dart';
 import '../main.dart';
 import '../signin_screen/signin_screen_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class HomeScreenWidget extends StatefulWidget {
@@ -52,7 +53,7 @@ class _HomeScreenWidgetState extends State<HomeScreenWidget>
   Widget build(BuildContext context) {
     return Scaffold(
       key: scaffoldKey,
-      backgroundColor: Color(0xFFF5F5F5),
+      backgroundColor: FlutterFlowTheme.tertiaryColor,
       body: SafeArea(
         child: Column(
           mainAxisSize: MainAxisSize.max,
@@ -71,8 +72,8 @@ class _HomeScreenWidgetState extends State<HomeScreenWidget>
                       ),
                     );
                   },
-                  child: Image.asset(
-                    'assets/images/full_logo.png',
+                  child: SvgPicture.asset(
+                    'assets/images/Logo_2.svg',
                     width: MediaQuery.of(context).size.width,
                     height: 100,
                     fit: BoxFit.contain,
